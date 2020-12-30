@@ -1,0 +1,628 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.1.7">
+    
+    
+      
+        <title>Python Tutorial 1 - Eric Riddoch</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.19753c6b.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.196e0c26.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="blue" data-md-color-accent="">
+      
+  
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#video-1-variables-and-data-types" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="Eric Riddoch" class="md-header-nav__button md-logo" aria-label="Eric Riddoch">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      
+        <div class="md-header-nav__ellipsis">
+          <span class="md-header-nav__topic md-ellipsis">
+            Eric Riddoch
+          </span>
+          <span class="md-header-nav__topic md-ellipsis">
+            
+              Python Tutorial 1
+            
+          </span>
+        </div>
+      
+    </div>
+    
+      <label class="md-header-nav__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+
+  
+
+<nav class="md-tabs md-tabs--active" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+    <li class="md-tabs__item">
+      
+      
+        
+      
+      <a href="./" class="md-tabs__link md-tabs__link--active">
+        Section 3: Variables   Data Types   Casting
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Eric Riddoch" class="md-nav__button md-logo" aria-label="Eric Riddoch">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    Eric Riddoch
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="nav-1" type="checkbox" id="nav-1" checked>
+    <label class="md-nav__link" for="nav-1">
+      Section 3: Variables   Data Types   Casting
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Section 3: Variables   Data Types   Casting" data-md-level="1">
+      <label class="md-nav__title" for="nav-1">
+        <span class="md-nav__icon md-icon"></span>
+        Section 3: Variables   Data Types   Casting
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Python Tutorial 1
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Python Tutorial 1
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rules-for-naming-variables" class="md-nav__link">
+    Rules for Naming Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    Strings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escape-sequences" class="md-nav__link">
+    Escape Sequences
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#number-data-types" class="md-nav__link">
+    Number Data Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#booleans" class="md-nav__link">
+    Booleans
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-typing" class="md-nav__link">
+    Dynamic Typing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casting" class="md-nav__link">
+    Casting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commenting" class="md-nav__link">
+    Commenting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-variable-errors" class="md-nav__link">
+    Common Variable Errors
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    Table of Contents
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    Introduction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rules-for-naming-variables" class="md-nav__link">
+    Rules for Naming Variables
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#strings" class="md-nav__link">
+    Strings
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#escape-sequences" class="md-nav__link">
+    Escape Sequences
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#number-data-types" class="md-nav__link">
+    Number Data Types
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#booleans" class="md-nav__link">
+    Booleans
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dynamic-typing" class="md-nav__link">
+    Dynamic Typing
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#casting" class="md-nav__link">
+    Casting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#commenting" class="md-nav__link">
+    Commenting
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#common-variable-errors" class="md-nav__link">
+    Common Variable Errors
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <!-- no toc -->
+<h1 id="video-1-variables-and-data-types">Video 1: Variables and Data Types<a class="headerlink" href="#video-1-variables-and-data-types" title="Permanent link">&para;</a></h1>
+<!-- no toc -->
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#rules-for-naming-variables">Rules for Naming Variables</a></li>
+<li><a href="#strings">Strings</a></li>
+<li><a href="#escape-sequences">Escape Sequences</a></li>
+<li><a href="#number-data-types">Number Data Types</a></li>
+<li><a href="#booleans">Booleans</a></li>
+<li><a href="#dynamic-typing">Dynamic Typing</a></li>
+<li><a href="#casting">Casting</a></li>
+<li><a href="#commenting">Commenting</a></li>
+<li><a href="#common-variable-errors">Common Variable Errors</a></li>
+</ul>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p>The 1st thing to know is that all Python files end with the extension <code>.py</code>. Then you have to understand that every programming language must have the ability to <strong>Accept</strong>, <strong>Store</strong> and <strong>Name</strong> Data.</p>
+<p>You have to be able to receive data from the keyboard, or from other parts of your program and assign a name to that data. This data is either a single value or multiple values that are assigned a name. Data that is assigned a name and that contains data is called a <mark>Variable</mark>. Python has many different ways to store lists of data which I’ll cover later.</p>
+<p>It is convenient to assign names to data. If I want to store my age in Python I’d type <code class="highlight"><span class="n">my_age</span> <span class="o">=</span> <span class="mi">43</span></code>. If I wanted to store my name I’d type <code class="highlight"><span class="n">my_name</span> <span class="o">=</span> <span class="err">“</span><span class="n">Derek</span><span class="err">”</span></code>.</p>
+<h2 id="rules-for-naming-variables">Rules for Naming Variables<a class="headerlink" href="#rules-for-naming-variables" title="Permanent link">&para;</a></h2>
+<p>Your variables can start with a letter or <code>_</code> (Underscore)
+After the 1st letter you can use numbers such as <code>num_1</code>
+You can’t put spaces in variable names <code>my_age</code> is ok, but my age is not</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>It is considered good practice to separate words with underscores (<code>my_age</code> vs. <code>myAge</code>)</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Keywords that you can't use for variable names</p>
+<p><code>and</code>, <code>del</code>, <code>from</code>, <code>not</code>, <code>while</code>, <code>as</code>, <code>elif</code>, <code>global</code>, <code>or</code>, <code>with</code>, <code>assert</code>, <code>else</code>, <code>if</code>, <code>pass</code>, <code>yield</code>, <code>break</code>, <code>except</code>, <code>import</code>, <code>print</code>, <code>class</code>, <code>exec</code>, <code>in</code>, <code>raise</code>, <code>continue</code>, <code>finally</code>, <code>is</code>, <code>return</code>, <code>def</code>, <code>for</code>, <code>lambda</code>, <code>try</code></p>
+</div>
+<p>Try running this code where you assign your name to a variable and then print a message.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">my_name</span> <span class="o">=</span> <span class="err">“</span><span class="n">Derek</span><span class="err">”</span> 
+<span class="nb">print</span><span class="p">(</span><span class="err">“</span><span class="n">Hello</span><span class="err">”</span><span class="p">,</span> <span class="n">my_name</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p><code>“Hello”</code> is known as a string. The <code class="highlight"><span class="nb">print</span><span class="p">()</span></code> function prints out the your screen the values between its parentheses. If you have multiple values separate them with commas.</p>
+<p>Data is stored in essentially boxes in your computers memory. The size of the box you assign is referred to as a data type. If you want to store values with decimal places you store that data in a float data type. If you want to store a series of characters, numbers, etc. you store in a string data type.</p>
+<h2 id="strings">Strings<a class="headerlink" href="#strings" title="Permanent link">&para;</a></h2>
+<p>A String is a data type that starts and ends with a <code>“</code>,  <code>‘</code>, or <code>‘’’</code> and contains letters, numbers and other characters. If you find that you want to use a double quote inside of a String proceed it with a backslash like this.</p>
+<div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="err">“</span>\<span class="err">”</span><span class="n">We</span> <span class="n">never</span> <span class="n">really</span> <span class="n">grow</span> <span class="n">up</span><span class="p">,</span> <span class="n">we</span> <span class="n">only</span> <span class="n">learn</span> <span class="n">how</span> <span class="n">to</span> <span class="n">act</span> <span class="ow">in</span> <span class="n">public</span>\<span class="err">”</span> <span class="o">-</span> <span class="n">Bryan</span> <span class="n">White</span><span class="err">”</span><span class="p">)</span>
+</code></pre></div>
+<h2 id="escape-sequences">Escape Sequences<a class="headerlink" href="#escape-sequences" title="Permanent link">&para;</a></h2>
+<p><code>\”</code> is one of many <mark>Escape Sequences</mark>. Here are other common Escape Sequences:</p>
+<ul>
+<li>Newline: <code>\n</code> </li>
+<li>Backslash: <code>\\</code> </li>
+<li>Single Quote: <code>\’</code></li>
+<li>Backspace: <code>\b</code> </li>
+<li>Tab: <code>\t</code></li>
+</ul>
+<p>I’ll do more with Strings later in the tutorial.</p>
+<h2 id="number-data-types">Number Data Types<a class="headerlink" href="#number-data-types" title="Permanent link">&para;</a></h2>
+<p>There are 3 main number types in Python. <mark>Integers</mark>, <mark>floats</mark> and <mark>complex numbers</mark>. I’ll cover complex numbers later.</p>
+<p>Integers are values that don’t have decimal values. <code>3</code>, <code>8</code>, <code>100000</code> are integers. Floats contain decimal values. Pi for example is a <code class="highlight"><span class="nb">float</span></code>.</p>
+<p>There is no maximum value for an integer, as long as you have enough memory. You can however get a practical maximum size with this. Note that you’ll have to import the <code>sys</code> module for this code to work. A module provides prewritten code you can use in your program.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">maxsize</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>You can get the maximum size for a <code class="highlight"><span class="nb">float</span></code> like this</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="kn">import</span> <span class="nn">sys</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">float_info</span><span class="o">.</span><span class="n">max</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>Please note however that errors can occur when using <code class="highlight"><span class="nb">float</span></code>s. This is true with all programming languages. When you create a variable a specific amount of space is set aside. If you create a value larger then that space allows errors can creep in. For example</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">f1</span> <span class="o">=</span> <span class="mf">1.1111111111111111</span>
+<span class="n">f2</span> <span class="o">=</span> <span class="mf">1.1111111111111111</span>
+<span class="n">f3</span> <span class="o">=</span> <span class="n">f1</span> <span class="o">+</span> <span class="n">f2</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">f3</span><span class="p">)</span>
+</code></pre></div>
+</td></tr></table>
+<p>As you can see <code class="highlight"><span class="nb">float</span></code>s are accurate to 15 digits. Later I’ll introduce data types with more accuracy.</p>
+<p>Here is an example of a complex number. I’ll cover them in more detail later.</p>
+<div class="highlight"><pre><span></span><code><span class="n">cn1</span> <span class="o">=</span> <span class="mi">5</span> <span class="o">+</span> <span class="mi">6</span><span class="n">j</span>
+</code></pre></div>
+<h2 id="booleans">Booleans<a class="headerlink" href="#booleans" title="Permanent link">&para;</a></h2>
+<p>A boolean data type can have either a value of <code>True</code> or <code>False</code>. You’ll see how extremely valuable they are later.</p>
+<div class="highlight"><pre><span></span><code><span class="n">can_vote</span> <span class="o">=</span> <span class="kc">True</span>
+</code></pre></div>
+<h2 id="dynamic-typing">Dynamic Typing<a class="headerlink" href="#dynamic-typing" title="Permanent link">&para;</a></h2>
+<p>Python is dynamically typed. What that means is a variables data type is determined by the value you assign to it. This is different from other languages. A variables value can also be changed even if that may sometimes not make sense. For example</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">my_age</span> <span class="o">=</span> <span class="mi">43</span>
+<span class="n">my_age</span> <span class="o">=</span> <span class="err">“</span><span class="n">Dog</span><span class="err">”</span>
+</code></pre></div>
+</td></tr></table>
+<p>Many errors can occur if you don’t make sure you are using the correct values. Some times you will find the need to convert from one type to another.</p>
+<h2 id="casting">Casting<a class="headerlink" href="#casting" title="Permanent link">&para;</a></h2>
+<p>Casting allows you to convert from one type to another. Here is how you cast to the different types. I’ll use the <code class="highlight"><span class="nb">type</span><span class="p">()</span></code> function to display the new data type for each variable.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3
+4
+5</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cast &quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="mf">5.4</span><span class="p">)))</span>   <span class="c1"># float to int</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cast 2 &quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="mf">5.4</span><span class="p">)))</span> <span class="c1"># float to string</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cast 3 &quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="nb">chr</span><span class="p">(</span><span class="mi">97</span><span class="p">)))</span>  <span class="c1"># unicode character to string </span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cast 4 &quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="nb">ord</span><span class="p">(</span><span class="s1">&#39;a&#39;</span><span class="p">)))</span> <span class="c1"># character to unicode </span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Cast 5 &quot;</span><span class="p">,</span> <span class="nb">type</span><span class="p">(</span><span class="nb">float</span><span class="p">(</span><span class="mi">2</span><span class="p">)))</span> <span class="c1"># integer to float</span>
+</code></pre></div>
+</td></tr></table>
+<h2 id="commenting">Commenting<a class="headerlink" href="#commenting" title="Permanent link">&para;</a></h2>
+<p>You may have noticed the <code>#</code> symbol used in the code above. <code>#</code> is used when you want to comment about what your code is doing. Everything you type after a <code>#</code> is ignored. It is very important to comment your code because what you understand about your code today you may forget 3 months from now.</p>
+<p>You can also create <mark>multi-line comments</mark> like this</p>
+<div class="highlight"><pre><span></span><code><span class="err">‘’’</span>
+<span class="n">I</span><span class="err">’</span><span class="n">m</span> <span class="n">a</span> <span class="n">multi</span><span class="o">-</span><span class="n">line</span> 
+<span class="n">comment</span> <span class="err">‘’’</span>
+</code></pre></div>
+<h2 id="common-variable-errors">Common Variable Errors<a class="headerlink" href="#common-variable-errors" title="Permanent link">&para;</a></h2>
+<p>Variable names are case sensitive. For example <code>Age</code> is not the same as <code>age</code>.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">age</span> <span class="o">=</span> <span class="mi">2</span>
+<span class="n">Age</span> <span class="o">=</span> <span class="mi">3</span>
+</code></pre></div>
+</td></tr></table>
+<p>Make sure you are casting to the correct data type when working with variables. Also make sure that you surround calculations with parentheses when they produce a single value.</p>
+<table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span>1
+2
+3</pre></div></td><td class="code"><div class="highlight"><pre><span></span><code><span class="n">num_1</span> <span class="o">=</span> <span class="err">“</span><span class="mi">1</span><span class="err">”</span>
+<span class="n">num_2</span> <span class="o">=</span> <span class="err">“</span><span class="mi">2</span><span class="err">”</span>
+<span class="nb">print</span><span class="p">(</span><span class="err">“</span><span class="mi">1</span> <span class="o">+</span> <span class="mi">2</span> <span class="o">=</span><span class="err">“</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">(</span><span class="n">num_1</span><span class="p">)</span> <span class="o">+</span> <span class="nb">int</span><span class="p">(</span><span class="n">num_2</span><span class="p">)))</span>
+</code></pre></div>
+</td></tr></table>
+<p>That’s all for now. In the next video we’ll learn about accepting user input and performing math calculations. Please take this quiz to reenforce what you’ve learned.</p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.0ac82a11.min.js"></script>
+      <script src="../../assets/javascripts/bundle.f81dfb4d.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: ['navigation.instant', 'navigation.tabs'],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.4ac00218.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+    
+  </body>
+</html>
