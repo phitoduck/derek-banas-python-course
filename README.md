@@ -14,6 +14,8 @@
 
 ## To Derek
 
+**TL;DR** Can my younger siblings beautify your additional readings for you?
+
 Hi Derek! My name is Eric. I've been a **huge** fan of your videos since my second year of college. I graduated in April 2020.
 
 When I saw your course, I **immediately** bought it for my younger brother and sister because I thought it would be the ultimate way to get them into coding.
