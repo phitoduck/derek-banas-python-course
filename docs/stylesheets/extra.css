@@ -1,0 +1,7 @@
+p > code:not(.highlight) {
+    color: #FF8A71 !important;
+}
+
+code {
+    font-weight: bold;
+}

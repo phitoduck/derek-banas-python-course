@@ -14,6 +14,8 @@
 
 ## To Derek
 
+**TL;DR** Can my younger siblings beautify your additional readings for you?
+
 Hi Derek! My name is Eric. I've been a **huge** fan of your videos since my second year of college. I graduated in April 2020.
 
 When I saw your course, I **immediately** bought it for my younger brother and sister because I thought it would be the ultimate way to get them into coding.
@@ -22,7 +24,7 @@ My brother Jared (20) wants to study something engineering-related. And my siste
 
 When I saw the readings that go with your course, I instantly wanted to make them colorful. I've been using a tool called [Material for MkDocs](https://squidfunk.github.io/mkdocs-material/) recently and I thought it would be perfect for this. After some googling, I was able to generate a pdf from markdown file that keeps the beautiful formatting.
 
-I was thinking you could use it to keep all of your additional readings as version controlled markdown files. Whenever you make a change, you can just regenerate the PDFs using the `make.sh` script (which starts Dockerfiles that do the actual work so that installation is simpler).
+I was thinking you could use it to keep all of your additional readings as version controlled markdown files. Whenever you make a change, you can just regenerate the PDFs using the `make.sh` script (which starts Docker containers that do the actual work so that installation is simpler).
 
 If you like how it looks, we could make this repository private and you could use this setup for your course. What I **really** want to ask is whether you'd consider actually hiring my younger siblings to convert the rest of your documentation to markdown/PDFs for you. You could pay them however much you thought was fair. I'll help them fix anything if any technical problems arise.
 
