@@ -14,7 +14,7 @@
 
 ## To Derek
 
-**TL;DR** Can my younger siblings beautify your additional readings for you?
+**TL;DR** Can my younger siblings beautify your additional readings for you? Here's an [example PDF](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/a3e49d8b-0238-4492-aa3f-3d78e4f5570b/Python_Tutorial_1.pdf?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAT73L2G45O3KS52Y5%2F20201230%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20201230T234644Z&X-Amz-Expires=86400&X-Amz-Signature=d0b3d202e1a4b83e603219683cd8d1673b0504cc95db9bd7fd23b8f6dae0b0fb&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Python%2520Tutorial%25201.pdf%22)
 
 Hi Derek! My name is Eric. I've been a **huge** fan of your videos since my second year of college. I graduated in April 2020.
 
